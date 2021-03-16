@@ -22,8 +22,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
       */
      public function number(): Response
 {
-        $number = 0;
         $message = "";
+        $number=random_int(0,100);
         if($this->session->get('number')!=null){
             $number = $this->session->get('number');
         }
